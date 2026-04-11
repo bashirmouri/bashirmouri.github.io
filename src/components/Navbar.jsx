@@ -1,10 +1,10 @@
 import ChessPieceIcon from './ChessPieceIcon'
 
 const navItems = [
-  { label: 'About', href: '#hero', coord: 'E4', piece: 'king' },
-  { label: 'Projects', href: '#projects', coord: 'C3', piece: 'queen' },
-  { label: 'Skills', href: '#services', coord: 'F6', piece: 'rook' },
-  { label: 'Contact', href: '#contact', coord: 'H1', piece: 'knight' },
+  { label: 'About', href: '#hero' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#services' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
           />
           <div className="leading-none">
             <p className="font-heading text-lg font-semibold text-board-50">Bashir</p>
-            <p className="text-[11px] uppercase tracking-[0.24em] text-highlight-500">CS Student</p>
+            <p className="text-[11px] uppercase tracking-[0.24em] text-highlight-500">CS Student | Systems + AI</p>
           </div>
           <ChessPieceIcon
             piece="king"
@@ -34,14 +34,7 @@ function Navbar() {
                 className="coord-chip group hover:border-highlight-500/70 hover:bg-board-700"
                 href={item.href}
               >
-                <ChessPieceIcon
-                  piece={item.piece}
-                  className="h-3.5 w-3.5 text-highlight-500 transition group-hover:-translate-y-0.5"
-                />
-                <span className="font-heading text-[10px] uppercase tracking-[0.18em] text-highlight-500">
-                  {item.coord}
-                </span>
-                <span className="hidden text-xs text-board-50 sm:inline">{item.label}</span>
+                <span className="text-xs font-semibold text-board-50">{item.label}</span>
               </a>
             </li>
           ))}

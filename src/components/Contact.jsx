@@ -13,8 +13,11 @@ function Contact() {
           </div>
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-board-200 sm:text-base">
-            Open to internships, student collaborations, and opportunities where I can contribute and keep learning.
+            Available for software engineering internships from Summer 2026, with strongest fit in backend,
+            full-stack, and security-focused engineering roles.
           </p>
+
+          <p className="mt-2 text-sm text-board-100/90">Response time: within 24 hours.</p>
 
           <div className="mt-7 space-y-2 text-sm text-board-100 sm:text-base">
             <p>
@@ -40,7 +43,7 @@ function Contact() {
             href="mailto:b.mouri@aui.ma"
             className="mt-8 inline-flex items-center justify-center rounded-md bg-accent-500 px-6 py-3.5 text-sm font-semibold text-board-800 shadow-[0_12px_28px_-18px_rgba(47,110,91,0.6)] hover:bg-accent-700 hover:shadow-[0_18px_34px_-18px_rgba(36,87,71,0.62)] motion-safe:animate-square-pulse"
           >
-            Get In Touch
+            Discuss Internship Roles
           </a>
         </div>
       </div>

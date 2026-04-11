@@ -2,19 +2,19 @@ import ChessPieceIcon from './ChessPieceIcon'
 
 const strengths = [
   {
-    piece: 'knight',
-    title: 'Algorithmic Thinking',
-    text: 'I enjoy solving structured problems and turning logic into clean, maintainable code.',
+    piece: 'rook',
+    title: 'Backend and Data Integrity',
+    text: 'Built Node.js APIs with validation layers and PostgreSQL schemas with constraints to keep data reliable.',
   },
   {
-    piece: 'rook',
-    title: 'Full-Stack Development',
-    text: 'I build complete web applications with React on the frontend and Node.js-based backend flows.',
+    piece: 'knight',
+    title: 'Logic-Heavy Application Design',
+    text: 'Implemented rule-based state handling for chess gameplay including illegal move checks and edge-case control.',
   },
   {
     piece: 'queen',
-    title: 'AI-Focused Learning',
-    text: 'My studies focus on applying AI concepts through practical experiments and real projects.',
+    title: 'Systems and Security Practice',
+    text: 'Develop C-based security workflows with memory debugging, binary analysis, and CTF-style exploitation practice.',
   },
 ]
 
@@ -26,11 +26,14 @@ function Hero() {
         <div className="pointer-events-none absolute -bottom-8 -right-8 h-44 w-44 rounded-full bg-accent-500/15 blur-3xl" />
 
         <div className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-accent-500">Computer Science Portfolio</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-accent-500">Full-Stack and Systems Portfolio</p>
           <h1 className="mt-4 text-5xl font-bold text-board-50 sm:text-7xl">Bashir</h1>
           <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-board-100/95 sm:text-xl">
-            I am a senior Computer Science student focused on AI and software engineering, building
-            project-based solutions that combine strong fundamentals with practical implementation.
+            Builds full-stack systems with a focus on backend logic, database structure, and state-consistent applications.
+          </p>
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-board-100/90 sm:text-base">
+            Built React, Node.js, and PostgreSQL projects with explicit validation rules, and applies C-level debugging
+            and memory analysis in security-focused practice.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -38,13 +41,13 @@ function Hero() {
               href="#projects"
               className="inline-flex items-center justify-center rounded-md bg-accent-500 px-6 py-3.5 text-sm font-semibold text-board-800 shadow-[0_12px_28px_-18px_rgba(47,110,91,0.62)] hover:bg-accent-700 hover:shadow-[0_18px_32px_-16px_rgba(36,87,71,0.62)]"
             >
-              View Featured Projects
+              Review Technical Projects
             </a>
             <a
               href="#contact"
               className="inline-flex items-center justify-center rounded-md border border-board-600/90 bg-board-800/80 px-6 py-3.5 text-sm font-semibold text-board-100 hover:border-accent-500 hover:bg-board-700/80 hover:text-board-50"
             >
-              Contact Me
+              Discuss Internship Fit
             </a>
           </div>
 
