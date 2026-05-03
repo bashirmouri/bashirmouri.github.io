@@ -51,6 +51,18 @@
     @apply text-3xl font-semibold text-board-50 sm:text-4xl;
   }
 
+  .section-kicker {
+    @apply text-sm font-semibold uppercase tracking-[0.22em] text-accent-500;
+  }
+
+  .section-lede {
+    @apply text-sm leading-7 text-board-100 sm:text-base;
+  }
+
+  .section-panel {
+    @apply rounded-3xl border border-board-600/70 bg-board-800/95 shadow-[0_22px_48px_-36px_rgba(31,41,55,0.28)];
+  }
+
   .board-grid-bg {
     @apply relative overflow-hidden;
   }

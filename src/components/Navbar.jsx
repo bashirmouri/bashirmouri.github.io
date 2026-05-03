@@ -19,7 +19,7 @@ function Navbar() {
           />
           <div className="leading-none">
             <p className="font-heading text-lg font-semibold text-board-50">Bashir</p>
-            <p className="text-[11px] uppercase tracking-[0.24em] text-highlight-500">CS Student | Systems + AI</p>
+            <p className="text-xs uppercase tracking-[0.18em] text-accent-700">CS Student | Systems + AI</p>
           </div>
           <ChessPieceIcon
             piece="king"
@@ -34,7 +34,7 @@ function Navbar() {
                 className="coord-chip group hover:border-highlight-500/70 hover:bg-board-700"
                 href={item.href}
               >
-                <span className="text-xs font-semibold text-board-50">{item.label}</span>
+                <span className="text-sm font-semibold text-board-50">{item.label}</span>
               </a>
             </li>
           ))}

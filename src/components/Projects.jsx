@@ -6,6 +6,11 @@ const projects = [
     title: 'GoChess',
     summary:
       'Interactive chess puzzle platform that delivers structured problem-solving scenarios with strict move validation and progression tracking.',
+    highlights: [
+      'Strict SAN-based move validation with deterministic puzzle progression.',
+      'Express + Supabase API serving FEN positions and normalized solution data.',
+      'Accuracy, timing, and streak scoring persisted across sessions.',
+    ],
     problem:
       'Enforce exact solution paths for chess puzzles while preventing illegal moves and valid-but-incorrect alternatives, without corrupting board state or progression logic.',
     systemDesign:
@@ -18,12 +23,18 @@ const projects = [
       'Reliable puzzle engine that enforces strict correctness, maintains consistent game state across edge cases, and supports scalable multi-level gameplay with performance tracking.',
     stack: ['React', 'Vite', 'chess.js', 'Express', 'Supabase', 'State Management', 'API Integration'],
     liveUrl: 'https://chess-puzzle-app-five.vercel.app/',
-    liveLabel: 'Play Game',
+    liveLabel: 'Play Puzzles',
+    githubUrl: 'https://github.com/bashirmouri/chess-puzzle-app.git',
   },
   {
     title: 'Aura Bakery',
     summary:
       'Gluten-free bakery storefront delivering bilingual navigation, structured menu browsing, and frictionless WhatsApp-based order generation.',
+    highlights: [
+      'Route-based EN/FR localization powered by i18next.',
+      'Normalized cart model with variant constraints and minimum order rules.',
+      'WhatsApp deep-link checkout with encoded order summaries.',
+    ],
     problem:
       'Enable a lightweight ordering experience without a backend while maintaining accurate cart state, localized content, and enforceable purchase constraints.',
     systemDesign:
@@ -37,6 +48,7 @@ const projects = [
     stack: ['React', 'Vite', 'React Router', 'i18next', 'Tailwind CSS', 'Context API', 'Client-Side State Management'],
     liveUrl: 'https://www.aurabakery.shop/en',
     liveLabel: 'Visit Website',
+    repoNote: 'Client-owned repository available on request.',
   },
 ]
 
@@ -47,21 +59,21 @@ function Projects() {
     <section id="projects" className="section-shell py-20 sm:py-24">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent-500">Technical Case Studies</p>
+          <p className="section-kicker">Technical Case Studies</p>
           <h2 className="section-title mt-2">Selected Projects</h2>
         </div>
 
-        <div className="inline-flex items-center gap-2 rounded-full border border-board-600/60 bg-board-800/90 px-4 py-2 text-sm text-board-100">
+        <div className="coord-chip px-4 py-2 text-sm font-semibold text-board-50">
           <ChessPieceIcon piece="queen" className="h-4 w-4 text-highlight-500" />
           1 flagship + 1 supporting build
         </div>
       </div>
 
-      <p className="mt-5 max-w-2xl text-sm leading-7 text-board-200 sm:text-base">
+      <p className="section-lede mt-5 max-w-2xl">
         Each project serves a purpose, with its specific architecture, technical constraints, and implementation decisions.
       </p>
 
-      <div className="board-grid-bg mt-10 rounded-3xl border border-board-600/70 bg-[linear-gradient(160deg,rgba(255,255,255,0.92),rgba(244,239,229,0.88))] p-5 sm:p-7">
+      <div className="section-panel mt-10 p-5 sm:p-7">
         <div className="relative z-10 grid gap-6">
           {projects.map((project, index) => (
             <ProjectCard

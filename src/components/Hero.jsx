@@ -3,32 +3,28 @@ import ChessPieceIcon from './ChessPieceIcon'
 const strengths = [
   {
     piece: 'rook',
-    title: 'Backend and Data Integrity',
-    text: 'Built Node.js APIs with validation layers and PostgreSQL schemas with constraints to keep data reliable.',
+    title: 'Project-Based Strengths',
+    text: 'Builds full-stack systems with backend correctness, relational data modeling, and strict state control using React, Node.js, and PostgreSQL.',
   },
   {
     piece: 'knight',
-    title: 'Logic-Heavy Application Design',
-    text: 'Implemented rule-based state handling for chess gameplay including illegal move checks and edge-case control.',
+    title: 'Security and Systems Depth',
+    text: 'Develops security-aware and low-level understanding through CTF work, debugging, and analysis of program behavior and vulnerabilities.',
   },
 ]
 
 function Hero() {
   return (
     <section id="hero" className="section-shell pt-16 sm:pt-20">
-      <div className="board-grid-bg rounded-3xl border border-board-600/80 bg-[linear-gradient(165deg,rgba(255,255,255,0.97),rgba(247,243,233,0.94))] px-6 py-14 text-center shadow-[0_30px_64px_-42px_rgba(31,41,55,0.34)] sm:px-12 sm:py-20">
-        <div className="pointer-events-none absolute -left-10 top-0 h-36 w-36 rounded-full bg-highlight-500/20 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-8 -right-8 h-44 w-44 rounded-full bg-accent-500/15 blur-3xl" />
-
+      <div className="section-panel px-6 py-14 text-center sm:px-12 sm:py-20">
         <div className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-accent-500">Full-Stack Portfolio</p>
-          <h1 className="mt-4 text-5xl font-bold text-board-50 sm:text-7xl">Bashir</h1>
-          <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-board-100/95 sm:text-xl">
-            Builds full-stack systems with a focus on backend logic, database structure, and state-consistent applications.
+          <p className="section-kicker">Full-Stack Portfolio</p>
+          <h1 className="mt-4 text-5xl font-bold text-board-50 sm:text-7xl">Bashir Mouri</h1>
+          <p className="section-lede mx-auto mt-7 max-w-3xl sm:text-xl">
+            Builds full-stack systems focused on backend correctness, relational data modeling, and strict state control, with security-aware and low-level system insight.
           </p>
-          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-board-100/90 sm:text-base">
-            Built React, Node.js, and PostgreSQL projects with explicit validation rules and clear state modeling for
-            interaction-heavy interfaces.
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-board-100 sm:text-base">
+            Built React, Node.js, and PostgreSQL applications with enforced state transitions, explicit validation, and structured schemas, ensuring integrity in complex interactions.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -57,7 +53,7 @@ function Hero() {
                   <ChessPieceIcon piece={strength.piece} className="h-4 w-4 text-highlight-500" />
                   <p className="text-base font-semibold text-board-50">{strength.title}</p>
                 </div>
-                <p className="mt-2 text-sm leading-7 text-board-100/90">{strength.text}</p>
+                <p className="mt-2 text-sm leading-7 text-board-100">{strength.text}</p>
               </li>
             ))}
           </ul>
