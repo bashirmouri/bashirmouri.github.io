@@ -11,6 +11,7 @@ function ProjectCard({
   githubUrl,
   index = 0,
   isPrimary = false,
+  isWide = false,
 }) {
   const isDarkTile = index % 2 === 1
 
@@ -40,7 +41,7 @@ function ProjectCard({
 
   return (
     <article
-      className={`move-tile relative flex h-full flex-col rounded-2xl border p-6 shadow-lg hover:ring-1 hover:ring-accent-500/45 sm:p-7 ${isPrimary ? 'md:col-span-2' : ''} ${cardTone}`}
+      className={`move-tile relative flex h-full flex-col rounded-2xl border p-6 shadow-lg hover:ring-1 hover:ring-accent-500/45 sm:p-7 ${isPrimary && isWide ? 'md:col-span-2' : ''} ${cardTone}`}
     >
       {isPrimary && (
         <p className="inline-flex w-fit items-center rounded-full border border-accent-500/40 bg-accent-100/60 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-accent-700">

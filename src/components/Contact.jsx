@@ -14,7 +14,7 @@ function Contact() {
 
           <p className="mt-4 max-w-2xl text-sm leading-7 text-board-200 sm:text-base">
             Available for software engineering internships from Summer 2026, with strongest fit in backend,
-            full-stack, and security-focused engineering roles.
+            full-stack engineering roles.
           </p>
 
           <p className="mt-2 text-sm text-board-100/90">Response time: within 24 hours.</p>

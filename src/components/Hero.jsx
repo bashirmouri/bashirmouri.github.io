@@ -11,11 +11,6 @@ const strengths = [
     title: 'Logic-Heavy Application Design',
     text: 'Implemented rule-based state handling for chess gameplay including illegal move checks and edge-case control.',
   },
-  {
-    piece: 'queen',
-    title: 'Systems and Security Practice',
-    text: 'Develop C-based security workflows with memory debugging, binary analysis, and CTF-style exploitation practice.',
-  },
 ]
 
 function Hero() {
@@ -26,14 +21,14 @@ function Hero() {
         <div className="pointer-events-none absolute -bottom-8 -right-8 h-44 w-44 rounded-full bg-accent-500/15 blur-3xl" />
 
         <div className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-accent-500">Full-Stack and Systems Portfolio</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-accent-500">Full-Stack Portfolio</p>
           <h1 className="mt-4 text-5xl font-bold text-board-50 sm:text-7xl">Bashir</h1>
           <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-board-100/95 sm:text-xl">
             Builds full-stack systems with a focus on backend logic, database structure, and state-consistent applications.
           </p>
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-board-100/90 sm:text-base">
-            Built React, Node.js, and PostgreSQL projects with explicit validation rules, and applies C-level debugging
-            and memory analysis in security-focused practice.
+            Built React, Node.js, and PostgreSQL projects with explicit validation rules and clear state modeling for
+            interaction-heavy interfaces.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -51,7 +46,7 @@ function Hero() {
             </a>
           </div>
 
-          <ul className="mt-12 grid gap-4 text-left sm:grid-cols-3">
+          <ul className="mt-12 grid gap-4 text-left sm:grid-cols-2">
             {strengths.map((strength, index) => (
               <li
                 key={strength.title}

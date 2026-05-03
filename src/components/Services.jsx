@@ -19,15 +19,6 @@ const services = [
       'Responsive UI implementation with clear interaction hierarchy and performance awareness.',
     ],
   },
-  {
-    title: 'Systems and Security Foundations',
-    piece: 'queen',
-    capabilities: [
-      'C memory-level debugging using step-through analysis and register/stack inspection.',
-      'CTF-oriented binary analysis workflow for exploit reasoning and payload iteration.',
-      'Defensive mindset for input validation, failure-path handling, and predictable program behavior.',
-    ],
-  },
 ]
 
 function Services() {
@@ -39,10 +30,10 @@ function Services() {
       </div>
 
       <p className="mt-5 max-w-2xl text-sm leading-7 text-board-200 sm:text-base">
-        Capabilities demonstrated through project implementation, debugging work, and systems-focused practice.
+        Capabilities demonstrated through project implementation, debugging work, and production-minded UI decisions.
       </p>
 
-      <ul className="mt-10 grid gap-5 md:grid-cols-3">
+      <ul className="mt-10 grid gap-5 md:grid-cols-2">
         {services.map((service) => (
           <li
             key={service.title}

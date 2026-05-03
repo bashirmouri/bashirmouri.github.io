@@ -36,25 +36,11 @@ const projects = [
     stack: ['React', 'Node.js', 'PostgreSQL', 'Responsive UI'],
     liveUrl: 'https://aura-bakery.vercel.app/en',
   },
-  {
-    title: 'Systems Security Lab (C + GDB)',
-    summary:
-      'Built a repeatable workflow for binary analysis and exploit development practice in CTF-style environments.',
-    problem:
-      'Manual exploit attempts were slow and inconsistent when stack layout and memory offsets changed between runs.',
-    systemDesign:
-      'C binaries are analyzed with GDB, then scripted with Python/pwntools-style tooling to automate offset discovery and payload construction.',
-    challenge:
-      'Keeping payloads reliable under crash-prone conditions while validating assumptions about stack and register state.',
-    solution:
-      'Implemented cyclic-pattern offset checks, scripted memory inspection steps, and iterative payload validation before final execution.',
-    result:
-      'Reduced debug cycles and solved multiple memory-corruption practice challenges with reproducible exploit steps.',
-    stack: ['C', 'GDB', 'Python', 'Memory Debugging'],
-  },
 ]
 
 function Projects() {
+  const isWideLayout = projects.length > 2
+
   return (
     <section id="projects" className="section-shell py-20 sm:py-24">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -65,7 +51,7 @@ function Projects() {
 
         <div className="inline-flex items-center gap-2 rounded-full border border-board-600/60 bg-board-800/90 px-4 py-2 text-sm text-board-100">
           <ChessPieceIcon piece="queen" className="h-4 w-4 text-highlight-500" />
-          1 flagship + 2 supporting builds
+          1 flagship + 1 supporting build
         </div>
       </div>
 
@@ -76,7 +62,13 @@ function Projects() {
       <div className="board-grid-bg mt-10 rounded-3xl border border-board-600/70 bg-[linear-gradient(160deg,rgba(255,255,255,0.92),rgba(244,239,229,0.88))] p-5 sm:p-7">
         <div className="relative z-10 grid gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
-            <ProjectCard key={project.title} index={index} isPrimary={index === 0} {...project} />
+            <ProjectCard
+              key={project.title}
+              index={index}
+              isPrimary={index === 0}
+              isWide={isWideLayout}
+              {...project}
+            />
           ))}
         </div>
       </div>
