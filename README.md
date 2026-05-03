@@ -1,16 +1,87 @@
-# React + Vite
+# Bashir Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website showcasing full-stack projects, technical capabilities, and contact details.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This site is built as a single-page experience with focused sections for projects, skills, and contact. The project cards surface quick highlights with optional deep-dive case study details to keep the page scannable.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Project case studies with highlights and expandable details
+- Skills sections grouped by backend, frontend, security, and adversarial thinking
+- Clear primary calls to action for projects and contact
+- Responsive layout and consistent typographic system
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite
+- Tailwind CSS
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (LTS)
+- npm
+
+### Install
+
+```bash
+npm install
+```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+### Lint
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```
+public/
+	bashirlogo.png
+src/
+	components/
+		Contact.jsx
+		Hero.jsx
+		Navbar.jsx
+		ProjectCard.jsx
+		Projects.jsx
+		Services.jsx
+	pages/
+		Home.jsx
+	index.css
+	main.jsx
+```
+
+## Customize Content
+
+- Project data: edit the projects array in src/components/Projects.jsx
+- Skills and capabilities: edit the services array in src/components/Services.jsx
+- Contact details: update src/components/Contact.jsx
+- Global styles and utilities: adjust src/index.css and tailwind.config.js
+
+## Deployment
+
+Run `npm run build` and deploy the generated dist/ folder to your hosting provider.
