@@ -8,6 +8,7 @@ function ProjectCard({
   result,
   stack,
   liveUrl,
+  liveLabel = 'Visit Website',
   githubUrl,
   index = 0,
   isPrimary = false,
@@ -82,7 +83,7 @@ function ProjectCard({
             rel="noreferrer"
             className={`inline-flex items-center justify-center rounded-md px-5 py-2.5 text-sm font-semibold ${liveButtonTone}`}
           >
-            Live Demo
+            {liveLabel}
           </a>
         )}
         {githubUrl && (
