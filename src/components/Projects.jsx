@@ -3,48 +3,52 @@ import ChessPieceIcon from './ChessPieceIcon'
 
 const projects = [
   {
-    title: 'GoChess',
+    title: 'GoChess - Full-Stack Chess Puzzle Platform',
     summary:
-      'Interactive chess puzzle platform that delivers structured problem-solving scenarios with strict move validation and progression tracking.',
+      'Full-stack chess puzzle platform focused on deterministic SAN validation, API-driven puzzle data, and repeatable training metrics.',
     highlights: [
-      'Strict SAN-based move validation with deterministic puzzle progression.',
-      'Express + Supabase API serving FEN positions and normalized solution data.',
-      'Accuracy, timing, and streak scoring persisted across sessions.',
+      'Deterministic SAN validation with chess.js to block illegal or out-of-sequence solutions.',
+      'Express + Supabase REST APIs serving FEN positions and normalized puzzle data.',
+      'Real-time accuracy, timing, and streak tracking with session-based resets.',
+      'Puzzle state management tuned for responsive play and consistent validation across sessions.',
+      'Local persistence for progress and high-score tracking without authentication.',
     ],
     problem:
-      'Enforce exact solution paths for chess puzzles while preventing illegal moves and valid-but-incorrect alternatives, without corrupting board state or progression logic.',
+      'Ensure puzzles accept only the intended move sequence while keeping training attempts repeatable and metrics accurate without requiring user accounts.',
     systemDesign:
-      'Full-stack architecture with a React + Vite frontend using react-chessboard and chess.js for state and rule enforcement. An Express API backed by Supabase serves puzzle data, including FEN positions and normalized solution sequences. Client-side state integrates scoring, timing, and progression, with persistence via localStorage.',
+      'React + Vite frontend using chess.js for SAN validation and board state. Express + Supabase backend serves FEN positions and normalized solution data via REST APIs. Client state tracks timing, accuracy, and streaks with localStorage persistence.',
     challenge:
-      'Synchronizing frontend state with authoritative move validation, handling edge cases (check, checkmate, stalemate, captures), and ensuring deterministic progression across multi-level gameplay.',
+      'Keeping validation deterministic while coordinating rapid state updates, enforcing sequence order, and supporting session resets for repeatable training.',
     solution:
-      'Implemented a validation pipeline that cross-checks user moves against predefined SAN sequences, rejects invalid transitions pre-commit, auto-executes opponent responses, and recalculates game state after each move. Integrated scoring logic tied to accuracy, time, and streak performance.',
+      'Built a SAN-driven validation pipeline that rejects invalid or out-of-order moves, synchronizes puzzle state, and records accuracy, timing, and streak metrics with session-aware resets.',
     result:
-      'Reliable puzzle engine that enforces strict correctness, maintains consistent game state across edge cases, and supports scalable multi-level gameplay with performance tracking.',
-    stack: ['React', 'Vite', 'chess.js', 'Express', 'Supabase', 'State Management', 'API Integration'],
+      'Consistent, repeatable puzzle training with reliable validation, responsive gameplay, and persistent progress tracking.',
+    stack: ['React', 'Vite', 'chess.js', 'Express', 'Supabase', 'REST APIs', 'Local Storage'],
     liveUrl: 'https://chess-puzzle-app-five.vercel.app/',
     liveLabel: 'Play Puzzles',
     githubUrl: 'https://github.com/bashirmouri/chess-puzzle-app.git',
   },
   {
-    title: 'Aura Bakery',
+    title: 'Aura Bakery - Bilingual Bakery Web Platform',
     summary:
-      'Gluten-free bakery storefront delivering bilingual navigation, structured menu browsing, and frictionless WhatsApp-based order generation.',
+      'Bilingual React storefront with localized routing, structured catalog rendering, and WhatsApp-based checkout.',
     highlights: [
       'Route-based EN/FR localization powered by i18next.',
-      'Normalized cart model with variant constraints and minimum order rules.',
-      'WhatsApp deep-link checkout with encoded order summaries.',
+      'Normalized cart model enforcing variants and minimum-order rules.',
+      'WhatsApp deep-link checkout that formats full orders without a payment backend.',
+      'Reusable UI components with JSON-driven product rendering for fast catalog updates.',
+      'Responsive layouts and streamlined ordering across desktop and mobile.',
     ],
     problem:
-      'Enable a lightweight ordering experience without a backend while maintaining accurate cart state, localized content, and enforceable purchase constraints.',
+      'Provide a lightweight ordering flow without backend infrastructure while maintaining accurate cart logic and bilingual content.',
     systemDesign:
-      'Single-page React application built with Vite and React Router, using language-prefixed routing for EN/FR localization via i18next. Menu data is sourced from structured JSON and rendered dynamically. Cart state is managed through a global context, with client-side computation of totals and order validation. Checkout is executed through a WhatsApp deep link with encoded order data.',
+      'React + Vite single-page app with React Router and i18next language-prefixed routes. Products render from structured JSON, and a global cart context enforces variant and minimum-order rules. Checkout uses a WhatsApp deep link that encodes the full order.',
     challenge:
-      'Maintaining consistent cart state across navigation, handling variant-based item uniqueness, enforcing minimum order constraints, and generating correctly formatted multilingual order messages without server support.',
+      'Synchronizing localization with cart state, enforcing product constraints, and generating consistent order messages for two languages.',
     solution:
-      'Implemented a normalized cart model using composite keys (item + variant) to prevent duplication conflicts, integrated client-side validation for minimum order enforcement, and constructed a deterministic encoding pipeline to transform cart data into a WhatsApp-compatible message. Localization is synchronized through route-based language control and persistent preferences.',
+      'Implemented a normalized cart schema with validation, connected it to route-based localization, and built deterministic order message generation for WhatsApp checkout.',
     result:
-      'Functional storefront that supports bilingual interaction, reliable cart behavior, and seamless external checkout flow without backend dependencies, reducing system complexity while preserving usability.',
+      'Reliable bilingual storefront with accurate cart behavior and a frictionless WhatsApp ordering flow for small-business customers.',
     stack: ['React', 'Vite', 'React Router', 'i18next', 'Tailwind CSS', 'Context API', 'Client-Side State Management'],
     liveUrl: 'https://www.aurabakery.shop/en',
     liveLabel: 'Visit Website',
