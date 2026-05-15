@@ -51,7 +51,7 @@ const projects = [
     result:
       'Reliable bilingual storefront with accurate cart behavior and a frictionless WhatsApp ordering flow for small-business customers.',
     stack: ['React', 'Vite', 'React Router', 'i18next', 'Tailwind CSS', 'Context API', 'Client-Side State Management'],
-    liveUrl: 'https://www.aurabakery.shop/en',
+    liveUrl: 'https://www.aurabakery.shop',
     liveLabel: 'Visit Website',
     repoNote: 'Client-owned repository available on request.',
   },
