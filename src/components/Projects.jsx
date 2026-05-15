@@ -33,6 +33,7 @@ const projects = [
     summary:
       'Bilingual React storefront with localized routing, structured catalog rendering, and WhatsApp-based checkout.',
     highlights: [
+      'Integrated AI assistant for guided storefront navigation and ordering support.',
       'Route-based EN/FR localization powered by i18next.',
       'Normalized cart model enforcing variants and minimum-order rules.',
       'WhatsApp deep-link checkout that formats full orders without a payment backend.',
